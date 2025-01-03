@@ -174,3 +174,24 @@ class HTTP_client:
                 remaining -= len(data)
 
         return header_dict, body
+    
+   def get(self, path, headers=None):
+        return self.send_request('GET', path, headers)
+
+   def post(self, path, headers=None, body=None):
+        return self.send_request('POST', path, headers, body)
+
+   def put(self, path, headers=None, body=None):
+        return self.send_request('PUT', path, headers, body)
+
+   def delete(self, path, headers=None):
+        return self.send_request('DELETE', path, headers)
+    
+   def options(self, path, headers=None):
+        return self.send_request('OPTIONS', path, headers)
+
+   def head(self, path, headers=None):
+        return self.send_request('HEAD', path, headers)
+    
+   def connect(self, path, headers=None):
+        return self.send_request('CONNECT', path, headers)
