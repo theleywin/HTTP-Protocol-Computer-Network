@@ -7,6 +7,7 @@ def make_request(method, path, headers=None, data=None):
     return response_string
 
 
+
 # Ejemplo:
 
 #     import os
